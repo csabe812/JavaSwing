@@ -1,8 +1,5 @@
 package hu.csfulop.javaswing;
 
-import java.awt.Dimension;
-import java.awt.Toolkit;
-
 import javax.swing.*;
 
 public class MainWindow extends JFrame {
@@ -12,8 +9,9 @@ public class MainWindow extends JFrame {
 	public MainWindow(String title) {
 		super(title);
 		this.setSize(800, 600);
-		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-		this.setLocation(dim.width / 2 - this.getSize().width / 2, dim.height / 2 - this.getSize().height / 2);
+		initMenuBar();
+		this.setLocationRelativeTo(null);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setVisible(true);
 	}
 
